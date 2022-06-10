@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Classroom_Management_System</groupId>
+  <artifactId>Classroom_Management_System</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencies>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.12</version>
+  		<scope>test</scope>
+  	</dependency>
+  	
+  	<dependency>
+    	<groupId>com.oracle</groupId>
+    	<artifactId>ojdbc6_g</artifactId>
+    	<version>1.0</version>
+    	<scope>system</scope>
+    	<systemPath>C:\oracle11g\product\11.2.0\dbhome_1\jdbc\lib\ojdbc6_g.jar</systemPath>
+	</dependency>
+	<!-- API, java.xml.bind module -->
+	<dependency>
+    	<groupId>jakarta.xml.bind</groupId>
+    	<artifactId>jakarta.xml.bind-api</artifactId>
+    	<version>2.3.2</version>
+	</dependency>
+	
+	<!-- Runtime, com.sun.xml.bind module -->
+	<dependency>
+    	<groupId>org.glassfish.jaxb</groupId>
+    	<artifactId>jaxb-runtime</artifactId>
+    	<version>2.3.2</version>
+	</dependency>
+  </dependencies>
+  
+</project>

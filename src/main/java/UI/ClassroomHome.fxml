@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: gainsboro; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
+   <children>
+      <SplitPane dividerPositions="0.199" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-radius: 10;">
+        <items>
+          <AnchorPane fx:id="OptionsPane" minHeight="0.0" minWidth="0.0" prefHeight="747.0" prefWidth="248.0" style="-fx-background-radius: 10; -fx-background-color: gainsboro;">
+               <children>
+                  <ImageView fitHeight="63.0" fitWidth="78.0" layoutX="107.0" layoutY="574.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/theme_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="assignments" layoutX="3.0" layoutY="216.0" mnemonicParsing="false" onAction="#showAssessments" prefHeight="25.0" prefWidth="261.0" text="Assignments" />
+                  <Button fx:id="quizes" layoutX="3.0" layoutY="245.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="261.0" text="Quizes" />
+                  <Button fx:id="announcement" layoutX="3.0" layoutY="273.0" mnemonicParsing="false" onAction="#showAnnouncements" prefHeight="25.0" prefWidth="261.0" text="Announcements" />
+                  <ImageView fitHeight="210.0" fitWidth="300.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/colored_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="attendence" layoutX="3.0" layoutY="300.0" mnemonicParsing="false" onAction="#AttendanceMenu" prefHeight="25.0" prefWidth="261.0" text="Attendence" />
+                  <Button layoutX="109.0" layoutY="683.0" mnemonicParsing="false" onAction="#go_to_login" text="Log Out" />
+                  <Button fx:id="StudentAttendance" layoutX="3.0" layoutY="300.0" mnemonicParsing="false" onAction="#DisplayStudentAttendanceMenu" prefHeight="25.0" prefWidth="261.0" text="Attendance" />
+                  <Button layoutX="114.0" layoutY="578.0" mnemonicParsing="false" onAction="#themeSwitchDark" opacity="0.0" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 20; -fx-background-radius: 50;" text="Button" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="classfeed" minHeight="0.0" minWidth="0.0" prefHeight="766.0" prefWidth="1037.0" style="-fx-background-color: mintcream; -fx-background-radius: 10;">
+               <children>
+                  <AnchorPane fx:id="bannerpane" layoutX="40.0" layoutY="27.0" prefHeight="165.0" prefWidth="1009.0" style="-fx-background-color: lightskyblue; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="teacherName" layoutX="48.0" layoutY="9.0" prefHeight="104.0" prefWidth="395.0" text="Welcome">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fx:id="accIcon" fitHeight="68.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/TeacherLogo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label fx:id="courseName" layoutX="56.0" layoutY="98.0" text="Course Name">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <ButtonBar layoutX="438.0" layoutY="21.0" prefHeight="40.0" prefWidth="393.0">
+                          <buttons>
+                            <Button fx:id="addAnnoun" mnemonicParsing="false" onAction="#addAnnouncement" style="-fx-background-color: orange;" text="Create an announcement">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/announ_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="addAssess" mnemonicParsing="false" onAction="#go_to_createAssessment" prefHeight="33.0" prefWidth="193.0" style="-fx-background-color: orange;" text="Create an assessment">
+                                 <graphic>
+                                    <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/assess_icon.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                          </buttons>
+                        </ButtonBar>
+                        <Button fx:id="Display_att" layoutX="459.0" layoutY="83.0" mnemonicParsing="false" onAction="#DisplayAttendance" style="-fx-background-color: orange;" text="DisplayAttendance" />
+                        <Button fx:id="update_att" layoutX="584.0" layoutY="83.0" mnemonicParsing="false" onAction="#UpdateAttendance" style="-fx-background-color: orange;" text="Update Attendance" />
+                        <Button fx:id="Mark_att" layoutX="715.0" layoutY="83.0" mnemonicParsing="false" onAction="#MarkAttendance" style="-fx-background-color: orange;" text="MarkAttendance" />
+                        <TextField fx:id="Date_ID2" layoutX="459.0" layoutY="120.0" />
+                        <Button fx:id="Display_att1" layoutX="459.0" layoutY="83.0" mnemonicParsing="false" onAction="#DisplayStudentAttendance" style="-fx-background-color: orange;" text="DisplayAttendance" />
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="165.0" fitWidth="1058.0" layoutX="15.0" layoutY="28.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@assets/lightBlue.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="add" disable="true" layoutX="941.0" layoutY="197.0" mnemonicParsing="false" onAction="#AnnouncementAdd" prefHeight="19.0" prefWidth="38.0" text="Add" visible="false" />
+                  <AnchorPane fx:id="descriptionPane" layoutX="573.0" layoutY="244.0" prefHeight="361.0" prefWidth="478.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: grey; -fx-border-radius: 10;">
+                     <children>
+                        <TextArea fx:id="itemDescription" disable="true" editable="false" layoutX="33.0" layoutY="36.0" prefHeight="283.0" prefWidth="409.0" style="-fx-background-radius: 10;" wrapText="true">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="listpane" layoutX="40.0" layoutY="244.0" prefHeight="472.0" prefWidth="489.0" style="-fx-background-color: white; -fx-border-color: grey; -fx-border-radius: 10; -fx-background-radius: 10;">
+                     <children>
+                        <ListView fx:id="classroomItems" layoutX="25.0" layoutY="39.0" prefHeight="410.0" prefWidth="436.0" style="-fx-background-radius: 10;" />
+                        <ListView fx:id="ListCheckBox" layoutX="56.0" layoutY="48.0" prefHeight="393.0" prefWidth="375.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <AnchorPane layoutX="848.0" layoutY="638.0" prefHeight="92.0" prefWidth="478.0" style="-fx-background-color: lightskyblue; -fx-background-radius: 10;">
+         <children>
+            <Label fx:id="success" alignment="CENTER" layoutX="2.0" layoutY="34.0" prefHeight="17.0" prefWidth="455.0" text="Messages shown here" textFill="#1c19ae">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

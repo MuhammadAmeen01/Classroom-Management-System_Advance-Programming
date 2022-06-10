@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
+   <children>
+      <AnchorPane layoutX="-8.0" layoutY="-9.0" prefHeight="777.0" prefWidth="1374.0" style="-fx-background-color: gainsboro;">
+         <children>
+            <ButtonBar layoutX="181.0" layoutY="159.0" prefHeight="94.0" prefWidth="896.0" style="-fx-background-color: skyblue; -fx-background-radius: 20;">
+               <buttons>
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="164.0" text="Go to Classroom">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#go_to_addTeacher" prefHeight="43.0" text="Add Teacher">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#go_to_teacherRemove" prefHeight="42.0" text="Remove Teacher">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#ShowTeachers" prefHeight="38.0" text="List of teachers">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#go_to_login" prefHeight="35.0" prefWidth="165.0" text="Log Out">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </buttons>
+            </ButtonBar>
+            <ImageView fitHeight="91.0" fitWidth="95.0" layoutX="60.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/admin_logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="adminName" layoutX="56.0" layoutY="28.0" prefHeight="77.0" prefWidth="659.0" text="Welcome!">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <ListView fx:id="teacherNames" layoutX="200.0" layoutY="428.0" prefHeight="263.0" prefWidth="275.0" style="-fx-background-color: gainsboro;" />
+            <ListView fx:id="teacherEmails" layoutX="478.0" layoutY="428.0" prefHeight="265.0" prefWidth="275.0" style="-fx-background-color: gainsboro;" />
+            <Label fx:id="NameList" layoutX="205.0" layoutY="376.0" prefHeight="30.0" prefWidth="261.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="EmailList" layoutX="482.0" layoutY="379.0" prefHeight="30.0" prefWidth="272.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="438.0" fitWidth="683.0" layoutX="917.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/colored_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
+   <children>
+      <ImageView fitHeight="769.0" fitWidth="1368.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/grey_bg.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="1.0" layoutY="-4.0" prefHeight="778.0" prefWidth="1366.0">
+         <children>
+            <Text layoutX="205.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher's Email" />
+            <TextField fx:id="teacher_email" layoutX="291.0" layoutY="266.0" prefHeight="25.0" prefWidth="176.0" promptText="Enter teacher's email to add" />
+            <Text layoutX="205.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher enrollment">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Button layoutX="205.0" layoutY="325.0" mnemonicParsing="false" onAction="#add_teacher_confirm" prefHeight="25.0" prefWidth="81.0" text="Add" />
+            <Label fx:id="success" alignment="CENTER" layoutX="399.0" layoutY="549.0" prefHeight="17.0" prefWidth="605.0" text="Messages will be shown here">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="667.0" layoutY="628.0" mnemonicParsing="false" onAction="#go_to_admin" style="-fx-background-color: skyblue;" text="Go Back" />
+            <ImageView fitHeight="562.0" fitWidth="842.0" layoutX="802.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/colored_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
